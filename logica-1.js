@@ -1,8 +1,8 @@
 
 
-import promptSync from 'prompt-sync';
+// import promptSync from 'prompt-sync'; // Comentado para usar html
 
-const prompt = promptSync();
+// const prompt = promptSync(); // comentado para usar html
 
 
 const num1 = parseInt(prompt('Ingrese un número: '));
@@ -11,7 +11,7 @@ const num3 = parseInt(prompt('Ingrese un número: '));
 
 if (num1 === num2 && num2 === num3) {
 
-    console.log('Números iguales.');
+    document.getElementById('resultado-iguales').innerText = 'Los números son iguales';
 
 } else {
     
@@ -50,8 +50,14 @@ if (num1 === num2 && num2 === num3) {
         numero3 = num3;
     }
 
-    console.log('=>', numero1, numero2, numero3);
-    console.log('<=', numero3, numero2, numero3);
+    // console.log('=>', numero1, numero2, numero3);
+    // console.log('<=', numero3, numero2, numero1);
+
+    document.getElementById('mayor-a-menor').innerText = 
+        'De mayor a menor (=>): ' + numero1 + ' - ' + numero3 + ' - ' + numero2;
+
+    document.getElementById('menor-a-mayor').innerText = 
+        'De menor a mayor (<=): ' + numero2 + ' - ' + numero3 + ' - ' + numero1;
 
 };
 
